@@ -1,5 +1,15 @@
+body {
+  @apply flex flex-col items-center;
+  @apply m-1;
+  font-family: helvetica, sans-serif;
+}
 html {
   @apply antialiased selection:bg-green-200;
+}
+header,
+main,
+footer {
+  @apply max-w-4xl w-full;
 }
 .grid {
   @apply grid-cols-1;

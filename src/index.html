@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🔨Tailwind VanillaJS Boilerplate</title>
-  </head>
-  <body>
-    <div class="flex flex-col items-center">
-      <span class="my-20 -rotate-3 transform rounded-md bg-red-500 py-2 px-4 text-center text-4xl text-white">
-        A simple boilerplate that actually works! 🔨
-      </span>
-    </div>
-    <script type="module" src="/main.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="/style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>vz's economy price guide for Minecraft 1.16</title>
+	</head>
+	<body>
+		<header id="top">
+			<div class="header pattern">
+				<h1>vz's economy price guide for Minecraft 1.16</h1>
+			</div>
+			<div class="intro">
+				<p><strong>This is a work in progress</strong></p>
+				<p>
+					This economy price guide is based off of Naughty_UK's super useful
+					<a href="https://www.naughtynathan.co.uk/minecraft/prices.htm" target="_blank">octain economy price guide</a>. Kinda stealing the
+					table layout as well because I always thought it was well laid out.
+				</p>
+				<p>
+					Apart from this price guide being generally modernised and updated to include all (eventually) 1.16 blocks and items, a major
+					difference is that I'm working off unit prices, <strong>NOT</strong> stack prices.
+				</p>
+
+				<p>I'm adding slowly all the blocks and items. Feel free to submit PRs or issues on the repo if you want to help.</p>
+				<p><a href="https://github.com/Biggsen/vz-price-guide" target="_blank">Github Repository</a></p>
+
+				<p>If you have any comments or questions, I'm <strong>verzion#5647</strong> on Discord.</p>
+			</div>
+			<nav class="quicknav">
+				<ul>
+					<li><a href="#ores">Ores</a></li>
+					<li><a href="#stone">Stone</a></li>
+					<li><a href="#earth">Earth</a></li>
+					<li><a href="#sand">Sand</a></li>
+					<li><a href="#wood">Wood</a></li>
+					<li><a href="#drops">Mob drops</a></li>
+					<li><a href="#food">Food</a></li>
+					<li><a href="#utility">Utility</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div x-data="setup">
+			<template x-for="item in items">
+				<p x-text="item.name"></p>
+			</template>
+		</div>
+
+		<script type="module" src="/main.js"></script>
+	</body>
 </html>

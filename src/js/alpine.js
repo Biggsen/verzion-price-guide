@@ -22,4 +22,16 @@ Alpine.magic('scroll', () => {
   return (target, options) => scroll(target, options);
 });
 
+Alpine.data('setup', () => ({
+  init() {
+    this.getItems();
+  },
+  items: null,
+  getItems() {
+    fetch('https://api.npoint.io/f5a8e4675589ae12ba3d')
+      .then((response) => response.json())
+      .then((json) => (this.items = json));
+  },
+}));
+
 Alpine.start();

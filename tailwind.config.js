@@ -8,7 +8,7 @@ module.exports = {
 	content: ['./**/*.html'],
 	theme: {
 		fontFamily: {
-			sans: ['Jost', 'Helvetica Neue', ...fontFamily.sans],
+			sans: ['Helvetica Neue', ...fontFamily.sans],
 			body: fontFamily.sans,
 		},
 		gridAutoFit: {
@@ -27,6 +27,7 @@ module.exports = {
 				warning: colors.yellow,
 				info: colors.blue,
 				critical: colors.red,
+				'grey-asparagus': '#49584b',
 			},
 			container: {
 				center: true,
